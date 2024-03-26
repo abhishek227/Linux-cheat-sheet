@@ -1,6 +1,6 @@
 # Linux-cheat-sheet
 
-> Click :star:if you like the project. Pull Request are highly appreciated. Follow me [@SudheerJonna](https://twitter.com/SudheerJonna) for technical updates.
+> Click :star:if you like the project. Pull Request are highly appreciated. Originally created by [@SudheerJonna](https://twitter.com/SudheerJonna). Updated by [@Abhishek](https://github.com/abhishek227)
 
 ### Table of Contents
 
@@ -25,7 +25,7 @@
 
 ### User Information
 
-1. **who** It is used to get information about currently logged in user on to system. If you don't provide any option or arguments, the command displays the following information for each logged-in user.
+1. **who** It is used to get information about currently logged in user on to system. If you don't provide any option or arguments, the command displays the following information for each logged-in user. Use **who** with arguments -a or --all . its same as -b -d --login -p -r -t -T -u
 
     1. Login name of the user
     2. User terminal
@@ -33,22 +33,30 @@
     4. Remote host name of the user
 
    ```bash
-   $ who
-   sudheer :0 2019-08-04 01:21 (:0)
+   $ root@ubuntu-host ~ ➜  who -all
+           system boot  2024-03-26 22:42
+           run-level 5  2024-03-26 22:42
+           root     + pts/1        2024-03-26 22:44   .          1625
    ```
 
-2. **whoami:** It display the system’s username
+2. **whoami:** It display the system’s username 
+  it's same as id -un
 
    ```bash
-   $ whoami
-   sudheer
+   $ root@ubuntu-host ~ ➜  whoami
+                          root
    ```
+   ```bash
+    $root@ubuntu-host ~ ➜  id -un
+    root
+   ```
+using whoami is good option in place of id -un 
 
 3. **id:** It display the user identification(the real and effective user and group IDs) information
 
    ```bash
-   $ id
-   uid=1000(sj) gid=1000(sj) groups=1000(sj),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),120(lpadmin),131(lxd),132(sambashare)
+   $ root@ubuntu-host ~ ➜  id
+    uid=0(root) gid=0(root) groups=0(root)
    ```
 4. **groups:** This command is used to display all the groups for which the user belongs to.
 
